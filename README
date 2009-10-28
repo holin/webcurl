@@ -1,3 +1,6 @@
+h2. Require
+sudo gem install sinatra
+
 git://github.com/holin/webcurl.git
 cd webcurl
 ruby webcurl.rb
