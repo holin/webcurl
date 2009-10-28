@@ -39,6 +39,7 @@ template :index do
   %span Curl cmd: 
   %br
   %textarea= @cmd
+  %br
   %input(type="submit" value="submit")
   }
 end
