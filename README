@@ -1,0 +1,3 @@
+git://github.com/holin/webcurl.git
+cd webcurl
+ruby webcurl.rb
