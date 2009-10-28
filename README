@@ -1,7 +1,8 @@
 h2. Require
 sudo gem install sinatra
+sudo gem install haml
 
-git://github.com/holin/webcurl.git
+git clone git://github.com/holin/webcurl.git
 cd webcurl
 ruby webcurl.rb
 
