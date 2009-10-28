@@ -59,7 +59,7 @@ end
 
 def get_url
   header = parse_header(params[:rq_header])
-  cmd = "curl #{header} -e 'http://holin' -i '#{@url}'"
+  cmd = "curl #{header} -i '#{@url}'"
   @cmd = cmd
   html = `#{cmd}`
   arr = html.split(/\r\n\r\n/m)
