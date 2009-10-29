@@ -1,4 +1,4 @@
-h2. Require
+<h2>Require</h2>
 sudo gem install sinatra
 sudo gem install haml
 
@@ -8,7 +8,7 @@ ruby webcurl.rb
 
 
 
-Request header looks like
+<h2>Request header looks like</h2>
 
 Host	localhost:4567
 User-Agent	Mozilla/7.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1.4) Gecko/20091016 Firefox/5.5.4
@@ -19,3 +19,6 @@ Keep-Alive	300
 Connection	keep-alive
 Cookie	__auc=b580a89621c1dfad75599b5d3ba21870
 Cache-Control	max-age=0
+
+<h2> Screenshot </h2>
+<a href="http://www.flickr.com/photos/holin/4053955579/" title="Web Curl Screenshot by holin, on Flickr"><img src="http://farm4.static.flickr.com/3077/4053955579_521bb85c8f_o.png" width="817" height="610" alt="Web Curl Screenshot" /></a>
