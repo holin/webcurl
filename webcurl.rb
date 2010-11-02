@@ -44,11 +44,30 @@ template :index do
   }
 end
 
+template :eval do
+  %{
+%h2.title Eval
+%form(action="/eval" method="post")
+ .content 
+  %span Input:  
+  %br
+  %textarea(name="input")= @input
+  %br
+ .content 
+  %span Output:  
+  %br
+  %textarea= @output
+  %br
+  %input(type="submit" value="submit")
+  }
+end
+
 def parse_header(s)
   h = {}
   s.split(/\n/).each do |line|
-    arr = line.gsub(/\:\s/, " ").split(/\s/)
-    h[arr.first] = arr.last
+    line.strip!
+    arr = line.sub(/\:\s*/, " ").split(/\s/)
+    h[arr.first] = arr[1..-1].join
   end
   str = ""
   h.each do |k, v|
@@ -77,6 +96,7 @@ get '/' do
   haml :index
 end
 
+
 post '/' do
   @url = params[:url]
   @header = nil
@@ -91,5 +111,18 @@ get '/header' do
     s << "#{k}: #{v}\n"
   end
   s
+end
+
+get '/eval' do
+  @input = nil
+  @output = nil
+  haml :eval
+end
+
+post '/eval' do
+  @xx = "xxxxxxxx"
+  @input = params[:input]
+  @output = eval(@input)
+  haml :eval
 end
 
