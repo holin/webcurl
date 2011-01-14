@@ -1,0 +1,3 @@
+1293774069
+get_url	/Users/holin/projects/webcurl/webcurl.rb	def get_url
+parse_header	/Users/holin/projects/webcurl/webcurl.rb	def parse_header(s)
