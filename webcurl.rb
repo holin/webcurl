@@ -79,8 +79,10 @@ end
 def get_url
   header = parse_header(params[:rq_header])
   cmd = "curl #{header} -i '#{@url}' --compressed"
+  puts cmd
   @cmd = cmd
   html = `#{cmd}`
+  puts html.inspect
   arr = html.split(/\r\n\r\n/m)
   @header = arr.first
   arr.delete_at(0)
